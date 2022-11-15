@@ -164,6 +164,43 @@
 
 **Full Changelog**: https://github.com/mesosphere/mindthegap/compare/v1.3.0...v1.3.1
 
+<!-- Release notes generated using configuration in .github/release.yaml at main -->
+
+## What's Changed
+### Exciting New Features 🎉
+* feat: support passing optional scheme in --to-registry by @dkoshkin in https://github.com/mesosphere/mindthegap/pull/252
+* feat: Reenable upx for macos binaries by @jimmidyson in https://github.com/mesosphere/mindthegap/pull/262
+### Other Changes
+* build(deps): bump github.com/aws/aws-sdk-go-v2/config from 1.17.8 to 1.17.9 by @dependabot in https://github.com/mesosphere/mindthegap/pull/237
+* build(deps): bump github.com/docker/cli from 20.10.19+incompatible to 20.10.20+incompatible by @dependabot in https://github.com/mesosphere/mindthegap/pull/240
+* build(deps): bump github.com/onsi/gomega from 1.22.0 to 1.22.1 by @dependabot in https://github.com/mesosphere/mindthegap/pull/239
+* build(deps): bump github.com/onsi/ginkgo/v2 from 2.3.1 to 2.4.0 by @dependabot in https://github.com/mesosphere/mindthegap/pull/241
+* build(deps): bump github.com/aws/aws-sdk-go-v2/service/ecr from 1.17.18 to 1.17.20 by @dependabot in https://github.com/mesosphere/mindthegap/pull/243
+* build: Upgrade tools by @jimmidyson in https://github.com/mesosphere/mindthegap/pull/244
+* build(deps): bump github.com/docker/docker from 20.10.19+incompatible to 20.10.21+incompatible by @dependabot in https://github.com/mesosphere/mindthegap/pull/245
+* build(deps): bump github.com/aws/aws-sdk-go-v2/config from 1.17.9 to 1.17.10 by @dependabot in https://github.com/mesosphere/mindthegap/pull/247
+* build(deps): bump github.com/stretchr/testify from 1.8.0 to 1.8.1 by @dependabot in https://github.com/mesosphere/mindthegap/pull/249
+* build(deps): bump github.com/docker/cli from 20.10.20+incompatible to 20.10.21+incompatible by @dependabot in https://github.com/mesosphere/mindthegap/pull/246
+* build(deps): bump github.com/onsi/gomega from 1.22.1 to 1.23.0 by @dependabot in https://github.com/mesosphere/mindthegap/pull/248
+* ci: Refactor checks to remove more asdf stuff by @jimmidyson in https://github.com/mesosphere/mindthegap/pull/253
+* build(deps): bump github.com/mesosphere/dkp-cli-runtime/core from 0.7.0 to 0.7.1 by @dependabot in https://github.com/mesosphere/mindthegap/pull/254
+* build(deps): bump github.com/spf13/cobra from 1.5.0 to 1.6.1 by @dependabot in https://github.com/mesosphere/mindthegap/pull/255
+* build(deps): bump github.com/onsi/gomega from 1.23.0 to 1.24.0 by @dependabot in https://github.com/mesosphere/mindthegap/pull/256
+* ci: Add gha actions to dependabot config by @jimmidyson in https://github.com/mesosphere/mindthegap/pull/263
+* build(deps): bump k8s.io/apimachinery from 0.25.3 to 0.25.4 by @dependabot in https://github.com/mesosphere/mindthegap/pull/257
+* build(deps): bump github.com/aws/aws-sdk-go-v2/config from 1.17.10 to 1.18.0 by @dependabot in https://github.com/mesosphere/mindthegap/pull/261
+* build(deps): bump github.com/onsi/gomega from 1.24.0 to 1.24.1 by @dependabot in https://github.com/mesosphere/mindthegap/pull/258
+* build(deps): bump google-github-actions/release-please-action from 3.5 to 3.6 by @dependabot in https://github.com/mesosphere/mindthegap/pull/264
+* build(deps): bump amannn/action-semantic-pull-request from 4 to 5 by @dependabot in https://github.com/mesosphere/mindthegap/pull/265
+* build(deps): bump sqren/backport-github-action from 8.3.1 to 8.9.7 by @dependabot in https://github.com/mesosphere/mindthegap/pull/266
+* build: Upgrade tools to latest versions by @jimmidyson in https://github.com/mesosphere/mindthegap/pull/268
+* build(deps): bump helm.sh/helm/v3 from 3.10.1 to 3.10.2 by @dependabot in https://github.com/mesosphere/mindthegap/pull/259
+* build(deps): bump github/codeql-action from 1 to 2 by @dependabot in https://github.com/mesosphere/mindthegap/pull/267
+* ci: Add dependabot automation to auto-approve and enable auto-merge by @jimmidyson in https://github.com/mesosphere/mindthegap/pull/269
+
+
+**Full Changelog**: https://github.com/mesosphere/mindthegap/compare/v1.3.1...v1.4.0
+
 ## [0.18.0](https://github.com/mesosphere/mindthegap/compare/v0.17.2...v0.18.0) (2022-08-10)
 
 
