@@ -274,6 +274,86 @@
 
 **Full Changelog**: https://github.com/mesosphere/mindthegap/compare/v1.6.1...v1.7.0
 
+## 1.12.0 (2023-12-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove unnecessary gzip compression of bundles by default ([#174](https://github.com/warmchang/mindthegap-OCI/issues/174))
+
+### Features
+
+* Add --on-existing-tag flag to push bundle ([#449](https://github.com/warmchang/mindthegap-OCI/issues/449)) ([c655d74](https://github.com/warmchang/mindthegap-OCI/commit/c655d749fe0560ccd0c62acdd42c825176c01a27))
+* Add Docker image ([#198](https://github.com/warmchang/mindthegap-OCI/issues/198)) ([41343a4](https://github.com/warmchang/mindthegap-OCI/commit/41343a40d627ed157c3f3adfdc142a7bb35fca91))
+* Add mindthegap to useragent ([#476](https://github.com/warmchang/mindthegap-OCI/issues/476)) ([14f7d2c](https://github.com/warmchang/mindthegap-OCI/commit/14f7d2ce1819132d0bf369c7296b601b49a392dc))
+* Auto-create ECR registries if they do not exist ([#79](https://github.com/warmchang/mindthegap-OCI/issues/79)) ([b595607](https://github.com/warmchang/mindthegap-OCI/commit/b595607e523497480998a4d35522c8d3553635ba))
+* Automatic retrieval of ECR credentials if using ECR as registry ([#440](https://github.com/warmchang/mindthegap-OCI/issues/440)) ([19de7b0](https://github.com/warmchang/mindthegap-OCI/commit/19de7b0ff47044c741abb0e1e299c687f90e97e7))
+* Build skopeo with go v1.18 ([9d04798](https://github.com/warmchang/mindthegap-OCI/commit/9d0479845fa34337ab56ae4a604b0147a6e061bb))
+* go v1.18 ([#110](https://github.com/warmchang/mindthegap-OCI/issues/110)) ([f84ffa3](https://github.com/warmchang/mindthegap-OCI/commit/f84ffa3019590f441fdfc935f112e3c7f049b6fc))
+* Hide helm bundle commands from DKP CLI ([#187](https://github.com/warmchang/mindthegap-OCI/issues/187)) ([0bfc696](https://github.com/warmchang/mindthegap-OCI/commit/0bfc6966e407d0e2cbb761cd139d5b6c9568a8ad))
+* Image push concurrency ([#477](https://github.com/warmchang/mindthegap-OCI/issues/477)) ([dfa7be6](https://github.com/warmchang/mindthegap-OCI/commit/dfa7be6cc19f71657f871c89ee84b3be127b8047))
+* Import multiple image bundles ([#167](https://github.com/warmchang/mindthegap-OCI/issues/167)) ([f94e4fe](https://github.com/warmchang/mindthegap-OCI/commit/f94e4fe35452e538ef6e2a165fc71f5e052bdb54))
+* Introduce common serve and push bundle commands ([#359](https://github.com/warmchang/mindthegap-OCI/issues/359)) ([84ad6e3](https://github.com/warmchang/mindthegap-OCI/commit/84ad6e32b731c6752cbe3772b272e1f66ee45d33))
+* Migrate to crane from skopeo ([#308](https://github.com/warmchang/mindthegap-OCI/issues/308)) ([a088f1e](https://github.com/warmchang/mindthegap-OCI/commit/a088f1e77796404c81b1359a6c14808355cf1495))
+* Parallel image pulls ([#456](https://github.com/warmchang/mindthegap-OCI/issues/456)) ([4341db2](https://github.com/warmchang/mindthegap-OCI/commit/4341db2910d6b905fb16a31f3f2569ae9ab64431))
+* Push multiple image bundles ([#169](https://github.com/warmchang/mindthegap-OCI/issues/169)) ([3c418fa](https://github.com/warmchang/mindthegap-OCI/commit/3c418fae7a72e764c090afdccbb011bdf68d19c7))
+* Reenable upx for macos binaries ([#262](https://github.com/warmchang/mindthegap-OCI/issues/262)) ([f70eaf1](https://github.com/warmchang/mindthegap-OCI/commit/f70eaf19c6df973e786a5f23a5bd4c64206b7507))
+* Serve multiple bundles ([#165](https://github.com/warmchang/mindthegap-OCI/issues/165)) ([f9fc263](https://github.com/warmchang/mindthegap-OCI/commit/f9fc263d8c8aa7ebede85a13b597c9c6f23c11f3))
+* skopeo v1.7.0 ([9440c2b](https://github.com/warmchang/mindthegap-OCI/commit/9440c2b82ab10c6526fe34abcaec83deac0150f9))
+* Skopeo v1.8.0 ([c8bdd81](https://github.com/warmchang/mindthegap-OCI/commit/c8bdd8135908de865eb8c07fdb7bd3320978ef0b))
+* support globs for image and helm bundles ([#183](https://github.com/warmchang/mindthegap-OCI/issues/183)) ([2f7bafa](https://github.com/warmchang/mindthegap-OCI/commit/2f7bafa4e88a86f3a753a96cf661f9e14f744d2f))
+* support passing optional scheme in --to-registry ([#252](https://github.com/warmchang/mindthegap-OCI/issues/252)) ([6983970](https://github.com/warmchang/mindthegap-OCI/commit/69839702f7b4935218db5e146d992e813e5254d2))
+* Use ghcr.io rather than Docker Hub ([#343](https://github.com/warmchang/mindthegap-OCI/issues/343)) ([b3c7655](https://github.com/warmchang/mindthegap-OCI/commit/b3c7655f3e2248e02e25562a9a10b0cc1133ffaf))
+* Use OCI storage for helm chart bundle ([#175](https://github.com/warmchang/mindthegap-OCI/issues/175)) ([dd3be37](https://github.com/warmchang/mindthegap-OCI/commit/dd3be371fb4e5528bd5e05c50ca869f7c622f57e))
+* Validate empty values for required flags ([#541](https://github.com/warmchang/mindthegap-OCI/issues/541)) ([d1d8eee](https://github.com/warmchang/mindthegap-OCI/commit/d1d8eee987890c862fbab5349a2de3749f59b809))
+
+
+### Bug Fixes
+
+* Always use custom transport to ensure TLS config is correct ([#315](https://github.com/warmchang/mindthegap-OCI/issues/315)) ([962c092](https://github.com/warmchang/mindthegap-OCI/commit/962c0925532b1fa4241ac1435c9bd32cd6e30181))
+* Clarify help text for CA certs ([#236](https://github.com/warmchang/mindthegap-OCI/issues/236)) ([8faea4f](https://github.com/warmchang/mindthegap-OCI/commit/8faea4fe67084c9d2e2f24d9ba5501ae598478ba))
+* commitDate in goreleaser ([#92](https://github.com/warmchang/mindthegap-OCI/issues/92)) ([017d2f3](https://github.com/warmchang/mindthegap-OCI/commit/017d2f36da2eb61b556f034e3e3232bd84ce7796))
+* Correctly handle multiple registries ([#459](https://github.com/warmchang/mindthegap-OCI/issues/459)) ([6113230](https://github.com/warmchang/mindthegap-OCI/commit/6113230bacc70b8dc0a388250ced0958a6d0df5d))
+* Correctly identify ECR registries ([#206](https://github.com/warmchang/mindthegap-OCI/issues/206)) ([944e546](https://github.com/warmchang/mindthegap-OCI/commit/944e546270fba4dcad1c5b5f6cf20c08d714b97a))
+* Disable upx for all platforms ([#129](https://github.com/warmchang/mindthegap-OCI/issues/129)) ([f5496c3](https://github.com/warmchang/mindthegap-OCI/commit/f5496c373f195e6e639d4d5911b68ad37c81ccc6))
+* Do not log base64 encoded ECR token ([#450](https://github.com/warmchang/mindthegap-OCI/issues/450)) ([cc1d5b4](https://github.com/warmchang/mindthegap-OCI/commit/cc1d5b430ac7d06c01a0748f3267a13844f249ad))
+* Do not upx pack darwin binaries ([#342](https://github.com/warmchang/mindthegap-OCI/issues/342)) ([e9d172d](https://github.com/warmchang/mindthegap-OCI/commit/e9d172d4a7ba3af37be5ef8234cdba11fe1bfb8c))
+* Do not upx pack darwin/arm64 binaries ([#311](https://github.com/warmchang/mindthegap-OCI/issues/311)) ([9f2de10](https://github.com/warmchang/mindthegap-OCI/commit/9f2de10152e32aa0d252dbc2203178eb9cb8da7c))
+* Ensure docker daemon skopeo logging is output on error ([#231](https://github.com/warmchang/mindthegap-OCI/issues/231)) ([5e061e4](https://github.com/warmchang/mindthegap-OCI/commit/5e061e417730f4a4539a6ba4144b3d42a65ccd91))
+* Ensure file permissions are preserved when copying files ([#191](https://github.com/warmchang/mindthegap-OCI/issues/191)) ([25e68b4](https://github.com/warmchang/mindthegap-OCI/commit/25e68b4a70e86c0e8b7391ddf3e36c2095d46b44))
+* Ensure that image IDs do not change on import ([#185](https://github.com/warmchang/mindthegap-OCI/issues/185)) ([80f7e5b](https://github.com/warmchang/mindthegap-OCI/commit/80f7e5b3dc02b89cf5646c05a3bf84f5ef2b63cc))
+* Fix import image-bundle command ([#88](https://github.com/warmchang/mindthegap-OCI/issues/88)) ([73e7f6c](https://github.com/warmchang/mindthegap-OCI/commit/73e7f6c2e7d48fc12c6325607b0486cda810ad48))
+* Hide crane warnings by default ([#507](https://github.com/warmchang/mindthegap-OCI/issues/507)) ([929c914](https://github.com/warmchang/mindthegap-OCI/commit/929c91415a50382886e3901001c2d317acd440ed))
+* Import all platforms from image bundle ([#292](https://github.com/warmchang/mindthegap-OCI/issues/292)) ([696cf03](https://github.com/warmchang/mindthegap-OCI/commit/696cf03751c10a6f5caae4b275650a9d5ce4717f))
+* prevent 404 on ECR during image creation ([#100](https://github.com/warmchang/mindthegap-OCI/issues/100)) ([e000ef7](https://github.com/warmchang/mindthegap-OCI/commit/e000ef7c83441c5e10a83eccfa5f4888fa5e310f))
+* Properly handle friendly image names ([#195](https://github.com/warmchang/mindthegap-OCI/issues/195)) ([66e0bab](https://github.com/warmchang/mindthegap-OCI/commit/66e0babf8b184be9043e1dbe143858159b77a039))
+* Remedy potential slowloris attack ([47a8362](https://github.com/warmchang/mindthegap-OCI/commit/47a836238d67b25738beb4a91bd0d56fa8f39c35))
+* remove hardcoded AWS region when creating ECR lifecycle policies ([#353](https://github.com/warmchang/mindthegap-OCI/issues/353)) ([2fe144a](https://github.com/warmchang/mindthegap-OCI/commit/2fe144aa8cfc0f4d81d354b4a493a1ac96984701))
+* Remove skopeo static builds from git-lfs ([703cfe0](https://github.com/warmchang/mindthegap-OCI/commit/703cfe0f6c9a437b127c37f8eff249965e4ebd9b))
+* Remove unnecessary gzip compression of bundles by default ([#174](https://github.com/warmchang/mindthegap-OCI/issues/174)) ([06ee2d7](https://github.com/warmchang/mindthegap-OCI/commit/06ee2d78940ff4b16ed3ec5fe65549611194034d))
+* Separate out source and destination remote options ([94087d3](https://github.com/warmchang/mindthegap-OCI/commit/94087d3002ab269a102c089a882e170d7646c485))
+* Specify exe suffix for skopeo on Windows ([#233](https://github.com/warmchang/mindthegap-OCI/issues/233)) ([f8cb026](https://github.com/warmchang/mindthegap-OCI/commit/f8cb026add52468b7f17166be681943b2d7b7e84))
+* support creating namespaced ECR repositories ([#386](https://github.com/warmchang/mindthegap-OCI/issues/386)) ([c79a8f2](https://github.com/warmchang/mindthegap-OCI/commit/c79a8f251961d1ec759de5c4d5c2694c6fe90375))
+* Support docker certs.d host certs again ([#313](https://github.com/warmchang/mindthegap-OCI/issues/313)) ([6ab5849](https://github.com/warmchang/mindthegap-OCI/commit/6ab5849dcd5650290e691c6b95acd899db8fa287))
+* Support http registries for pushing bundles ([#405](https://github.com/warmchang/mindthegap-OCI/issues/405)) ([6ef9359](https://github.com/warmchang/mindthegap-OCI/commit/6ef9359c5fca37a16c792c68e18382507a593eda))
+* Unset REGISTRY_ prefixed env vars ([#424](https://github.com/warmchang/mindthegap-OCI/issues/424)) ([d48a2b0](https://github.com/warmchang/mindthegap-OCI/commit/d48a2b02ed3e7b09c451b0a35ac6dfd71747016f))
+* Upgrade containerd dep to v1.6.6 to fix CVE ([#128](https://github.com/warmchang/mindthegap-OCI/issues/128)) ([638f80e](https://github.com/warmchang/mindthegap-OCI/commit/638f80ef5d991605fb4c0a369fee2f6aef46cd52))
+* Upgrade github.com/sylabs/sif/v2@v2.8.1 ([#227](https://github.com/warmchang/mindthegap-OCI/issues/227)) ([757f1a2](https://github.com/warmchang/mindthegap-OCI/commit/757f1a26691231e2e6e791f6c6e89c7100353425))
+* Use ocischema.Manifest for plain image details ([#145](https://github.com/warmchang/mindthegap-OCI/issues/145)) ([976a253](https://github.com/warmchang/mindthegap-OCI/commit/976a2539d0c9241689077faa1abebdef629ae161))
+* using wrong argument when building ECR repository ([#387](https://github.com/warmchang/mindthegap-OCI/issues/387)) ([0c102f3](https://github.com/warmchang/mindthegap-OCI/commit/0c102f3864bbe1d5f6c1a79467dc958375a583db))
+* Write out merged image bundle config when serving ([#168](https://github.com/warmchang/mindthegap-OCI/issues/168)) ([a3ab022](https://github.com/warmchang/mindthegap-OCI/commit/a3ab022f547bc4f8f65431966d5c4bcc16b7456b))
+
+
+### Build System
+
+* release v0.17.1 ([49eb8a2](https://github.com/warmchang/mindthegap-OCI/commit/49eb8a245c5b25c15a9ac0a06e5617761c690be8))
+* release v0.18.0 ([29aed52](https://github.com/warmchang/mindthegap-OCI/commit/29aed52bd735057fbddb80d32df5ab6f05db3f04))
+* release v1.0.0 ([b3546c3](https://github.com/warmchang/mindthegap-OCI/commit/b3546c32173e8df077a650d7469d592deda5133f))
+* release v1.0.0-rc.1 ([a3079f5](https://github.com/warmchang/mindthegap-OCI/commit/a3079f5b0f011bd472dc17541733d6e23f00ded3))
+* release v1.12.0 ([1802692](https://github.com/warmchang/mindthegap-OCI/commit/18026926556bb11c6cc7b971603511a523a748f8))
+* release v1.2.0 ([e0d99dc](https://github.com/warmchang/mindthegap-OCI/commit/e0d99dce74e9feece9968b7c7a5dc67e2e1ca8b2))
+* release v1.3.0 ([9ca6454](https://github.com/warmchang/mindthegap-OCI/commit/9ca64540120d85d9f9b83c9c30137028b0e0c8e1))
+
 ## 1.12.0 (2023-10-17)
 
 <!-- Release notes generated using configuration in .github/release.yaml at main -->
